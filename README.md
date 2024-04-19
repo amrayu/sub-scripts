@@ -1,4 +1,4 @@
-This repo contains scripts related to processing, converting, and cleaning up subtitles.
+This repo contains scripts that tie together various frameworks related to processing, converting, and cleaning up subtitles.
 
 ## batch-vtt-to-srt.py
 Mainly created to clean-up NetFlix .vtt files and convert to .srt
