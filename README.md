@@ -19,3 +19,23 @@ Mainly created to clean-up NetFlix .vtt files and convert to .srt
 ### How to run:
 - python3 batch-vtt-to-srt.py in terminal or commandline
 - Input filepath to folder containing VTT files and hit enter
+
+## dl-subs.py
+Easy way to download, clean-up, and convert subtitles to .srt
+
+## What does this script do?
+- Download a .vtt file from Hulu JP and cleans, converts to .srt
+- - Removes emojis from Hulu JP files
+  - Removes WEBVTT metadata 
+- Download a .vtt file from TVer and converts to .srt
+
+### Script requirements:
+- python3
+- ffmpeg
+- subrip
+- yt-dlp
+
+### How to run:
+- python3 dl-subs.py in terminal or commandline
+- Input number based on prompt
+- Either add direct link to Hulu JP .vtt or add TVer link
