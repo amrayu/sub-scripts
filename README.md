@@ -25,9 +25,10 @@ Easy way to download, clean-up, and convert subtitles to .srt
 
 ## What does this script do?
 - Download a .vtt file from Hulu JP and cleans, converts to .srt
-- - Removes emojis from Hulu JP files
+  - Removes emojis from Hulu JP files
   - Removes WEBVTT metadata 
 - Download a .vtt file from TVer and converts to .srt
+- Download an .html captions file from NHK, saves as .ttml, and converts to .srt
 
 ### Script requirements:
 - python3
@@ -39,7 +40,7 @@ Easy way to download, clean-up, and convert subtitles to .srt
 ### How to run:
 - `python3 dl-subs.py` in terminal or commandline
 - Input number based on which conversion is needed:
-- - 1 Download VTT from HULU and clean/convert to SRT
+  - 1 Download VTT from HULU and clean/convert to SRT
   - 2 Clean/convert existing SRT on your local drive
   - 3 Download VTT from TVer and convert to SRT
   - 4 Download HTML, save as TTML, convert to SRT
