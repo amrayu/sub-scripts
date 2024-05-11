@@ -34,6 +34,7 @@ Easy way to download, clean-up, and convert subtitles to .srt
 - [ffmpeg](https://ffmpeg.org/download.html)
 - subrip - I think this comes bundled with ffmpeg
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- convert-ttml.py if TTML to SRT conversion is needed
 
 ### How to run:
 - `python3 dl-subs.py` in terminal or commandline
