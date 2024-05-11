@@ -11,6 +11,24 @@ def download_tver_and_convert_vtt_to_srt(tver_link):
     yt_dlp_command = f'yt-dlp "{tver_link}" --write-sub --convert-sub=srt --skip-download -k'
     subprocess.call(yt_dlp_command, shell=True)
 
+def download_convert_nhk_caps(nhk_link):
+    # Path to the convert.py script - Replace with absolute path to convert-ttml
+    convert_script_path = "/path/to/convert-ttml.py"
+
+    # Prompt for TTML file name
+    ttml_file_name = input("Enter the name of the TTML file (without extension): ")
+    ttml_file_path = f"{ttml_file_name}.ttml"
+
+    # Download TTML file using curl
+    command = f'curl -o "{ttml_file_path}" "{nhk_link}"'
+    subprocess.call(command, shell=True)   
+
+    # Run the conversion script on the downloaded TTML file
+    convert_command = f'python3 "{convert_script_path}" "{ttml_file_path}"'
+    subprocess.call(convert_command, shell=True)
+
+    print("TTML to SRT conversion completed.") 
+
 def process_vtt_files_in_folder(folder_path):
     # Get all .vtt files in the specified folder
     vtt_files = [file for file in os.listdir(folder_path) if file.endswith(".vtt")]
@@ -87,7 +105,7 @@ def clean_srt_file(srt_file_path):
     return new_file_path
 
 # Prompt for input type
-input_type = input("Enter '1' for VTT link or '2' for local SRT file or '3' for TVer link or '4' to batch process vtt files: ")
+input_type = input("Enter '1' for VTT link or '2' for local SRT file or '3' for TVer link or '4' for ttml link: ")
 
 if input_type == '1':
     # Prompt for VTT link
@@ -119,12 +137,18 @@ elif input_type == '3':
     # Prompt for TVer link
     tver_link = input("Enter TVer link: ")
 
-
     # Download from TVer and convert VTT to SRT
     download_tver_and_convert_vtt_to_srt(tver_link)
     print(f"VTT converted to SRT.")
 
 elif input_type == '4':
+    # Prompt for TTML link
+    nhk_link = input("Enter the NHK-TTML link: ")
+    
+    # Download and convert TTML to SRT using FFmpeg
+    download_convert_nhk_caps(nhk_link)  
+
+elif input_type == '5':
     # Prompt for folder path
     folder_path = input("Enter the path of the folder containing .vtt files: ")
 
