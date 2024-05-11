@@ -1,7 +1,7 @@
 This repo contains scripts that tie together various frameworks related to processing, converting, and cleaning up subtitles.
 
 ## batch-vtt-to-srt.py
-Mainly created to clean-up NetFlix .vtt files and convert to .srt
+Mainly created to clean-up NetFlix .vtt files and batch convert to .srt
 
 ### What does the script do?
 - Removes WEBVTT header information
@@ -21,7 +21,7 @@ Mainly created to clean-up NetFlix .vtt files and convert to .srt
 - Input filepath to folder containing VTT files and hit enter
 
 ## dl-subs.py
-Easy way to download, clean-up, and convert subtitles to .srt
+Easy way to download single subtitles, clean-up, and convert subtitles to .srt
 
 ## What does this script do?
 - Download a .vtt file from Hulu JP and cleans, converts to .srt
