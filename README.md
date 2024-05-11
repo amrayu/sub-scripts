@@ -13,7 +13,7 @@ Mainly created to clean-up NetFlix .vtt files and convert to .srt
 - Removes positioning metadata
 
 ### Script requirements:
-- ffmpeg is required to handle some processes
+- [ffmpeg](https://ffmpeg.org/download.html) is required to handle some processes
 - python3
 
 ### How to run:
@@ -32,7 +32,7 @@ Easy way to download, clean-up, and convert subtitles to .srt
 ### Script requirements:
 - python3
 - [ffmpeg](https://ffmpeg.org/download.html)
-- subrip
+- subrip - I think this comes bundled with ffmpeg
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
 ### How to run:
