@@ -37,5 +37,9 @@ Easy way to download, clean-up, and convert subtitles to .srt
 
 ### How to run:
 - `python3 dl-subs.py` in terminal or commandline
-- Input number based on prompt
+- Input number based on which conversion is needed:
+- - 1 Download VTT from HULU and clean/convert to SRT
+  - 2 Clean/convert existing SRT on your local drive
+  - 3 Download VTT from TVer and convert to SRT
+  - 4 Download HTML, save as TTML, convert to SRT
 - Either add direct link to Hulu JP .vtt or add TVer link
