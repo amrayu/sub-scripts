@@ -1,5 +1,8 @@
 This repo contains scripts that tie together various frameworks related to processing, converting, and cleaning up subtitles.
 
+## subtitle-tool (consolidates all the scripts below into one script)
+`pip install -r requirements.txt`
+
 ## batch-vtt-to-srt.py
 Mainly created to clean-up NetFlix .vtt files and batch convert to .srt
 
